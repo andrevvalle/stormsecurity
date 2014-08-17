@@ -16,7 +16,7 @@
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
-    <body>
+    <body onload="init()">
     <!--[if lt IE 7]>
         <p class="browsehappy">Você está usando um navegador<strong>desatualizado</strong>. Porfavor <a href="http://browsehappy.com/">atualize seu navegador</a> para uma melhor experiência.</p>
     <![endif]-->
@@ -103,23 +103,45 @@
     <section class="wrapper-section">
       <div class="container c-custom section1">
         <div class="col-lg-6 col-md-6 col-sm-6 col-1">
-          <article>
-            <header>
-              <h1>Pequenas empresas grandes negócios</h1>
-              <h4>Ex-hacker brasileiro projeta miniaviões para encontrar carros roubados, vigiar fazendas e gerenciar o trânsito</h4>
-            </header>
-            <figure>
-              <img src="img/posts/img-article.jpg" height="335" width="457" alt="img_article">
-              <span class="line-blue"></span>
-              <figcaption>VIGIA AÉREO: O modelo Vant, criado por Abreu Júnior, é versão compacta dos usados no Oriente Médio</figcaption>
-            </figure>
-            <div class="main entry-content">
-              <p>O tempo não decide entre ensolarado, nublado e chuvoso na Ilha de Guaratiba <br>— bairro do Rio de Janeiro a 45 km do centro. “É bom que a gente já vê se o aviãozinho se garante em qualquer clima”, diz o engenheiro Wanderley Abreu Júnior. É o primeiro teste oficial do seu Veículo Aéreo Não Tripulado (doravante, Vant). Quem olha não dá nada. O aeromodelo mede 1,60 m da ponta de uma asa à da outra e pesa 750 g, mas tem versões maiores — de 3,5 kg e de 20 kg. O design também não é o forte, mas isso não parece preocupar Abreu Júnior. Seu negócio não é fabricar as aeronaves, mas o sistema de câmeras e sensores infravermelhos que as transforma em robôs de vigilância e monitoramento de tráfego.</p>
-              <p>Os Vants desenvolvidos pelo brasileiro são bem diferentes daqueles que ficaram conhecidos por custarem milhões de dólares e participarem de ações militares como a Guerra do Afeganistão e a captura de Bin Laden. Fazem parte de uma nova leva de veículos mais baratos, com menos recursos e projetados para o uso civil. Abreu Júnior não está só. A polícia da Austrália já recomendou ao governo que adote esse tipo de equipamento na busca por automóveis roubados, e a Inglaterra planeja empregar Vants durante as Olimpíadas para patrulhar bancos, motoristas com “comportamento antissocial” e manifestantes. Esse tipo de Big Brother aéreo é também o objetivo do brasileiro. Seus aviões poderão monitorar o trânsito, auxiliar na busca de veículos suspeitos e no controle das fronteiras de propriedades rurais. O software do equipamento é preparado para, por exemplo, identificar a placa de um carro roubado e fornecer a sua localização à polícia.</p>
-            </div>
-          </article>
+          <div id="loading">
+            <span><img src="img/pageload.GIF" height="30" width="30" alt=""></span>
+          </div>
+          <div class="clear"></div>
+          <div id="appContent"></div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 col-2"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-2">
+          <aside class="aside-sec1">
+            <div class="social">
+              <ul>
+                <li class="fb"><a href=""><img src="img/fb.png" alt=""></a></li>
+                <li class="tw"><a href=""><img src="img/tw.png" alt=""></a></li>
+              </ul>
+            </div>
+            <div class="controls" id="controls">
+              <a href="" id="next">
+                <span class="icone next"></span>
+              </a>
+              <a href="" id="next">
+                <span class="t_span">Próximo</span>
+              </a>
+            </div>
+            <div class="controls">
+              <a href="" id="prev">
+                <span class="icone prev"></span>
+              </a>
+              <a href="" id="prev">
+                <span class="t_span">Anterior</span>
+              </a>
+            </div>
+          </aside>
+          <nav id="nav-ajax" class="navbar-ajax">
+            <ul class="ulajax">
+              <li><a class="ajax active" href="posts/content1.html">Pequenas empresas grandes necocios</a></li>
+              <li><a class="ajax" href="posts/content2.html">Blog Criativo</a></li>
+              <li><a class="ajax" href="posts/content3.html">Isto é online</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </section>
 
