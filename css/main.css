@@ -2,6 +2,9 @@
 .c-custom {
   max-width: 986px;
 }
+.clear {
+  clear: both;
+}
 /* ---- GERAL : CLOSE  ---- */
 /* ---- NAVBAR : START ---- */
 .wrapper-navbar {
@@ -173,6 +176,76 @@
   right: -10px;
 }
 /* ---- HEADER : CLOSE ---- */
+/* ---- SECTION1 : START ---- */
+.wrapper-section {
+  background: #000000;
+}
+.section1 {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+.section1 .col-1,
+.section1 .col-2 {
+  padding: 0;
+}
+.section1 .col-1 h1,
+.section1 .col-1 h4,
+.section1 .col-1 p {
+  color: #fff;
+  font-family: helvetica, arial;
+}
+.section1 .col-1 header h1 {
+  font-size: 17px;
+  text-transform: uppercase;
+}
+.section1 .col-1 header h4 {
+  font-size: 14px;
+}
+.section1 .col-1 figure {
+  margin-bottom: 30px;
+}
+.section1 .col-1 figure:before {
+  content: "";
+  display: block;
+  width: 85%;
+  height: 3px;
+  background: #1979bc;
+  position: relative;
+  top: 2px;
+  left: -3px;
+}
+.section1 .col-1 figure:after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 40px;
+  position: absolute;
+  top: 85px;
+  right: -2px;
+  background: #1979bc;
+}
+.section1 .col-1 figure img {
+  width: 100%;
+  height: auto;
+}
+.section1 .col-1 figure .line-blue:after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 260px;
+  position: absolute;
+  top: 195px;
+  right: -1px;
+  background: #1979bc;
+}
+.section1 .col-1 figure figcaption {
+  font-size: 10px;
+  color: #fff;
+}
+.section1 .col-1 figure .entry-content {
+  font-size: 15px;
+}
+/* ---- SECTION1 : CLOSE ---- */
 @media screen and (max-width: 986px) {
   /* ---- NAVBAR : START ---- */
   .wrapper-navbar {
@@ -229,7 +302,7 @@
     right: -1px;
     top: 57px;
     min-width: inherit;
-    width: 50%;
+    width: 255px;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.8);
     display: none;
@@ -251,4 +324,33 @@
     border-radius: 50%;
   }
   /* ---- NAVBAR : END ---- */
+}
+@media screen and (max-width: 768px) {
+  /* ---- HEADER : START ---- */
+  .navbar {
+    width: 95%;
+  }
+  .wrapper-header {
+    height: auto;
+  }
+  .slide {
+    margin-top: 90px;
+  }
+  .slide .carousel-caption .col-1 {
+    display: none;
+  }
+  .slide .carousel-caption .col-2 img {
+    width: 65%;
+  }
+  /* ---- HEADER : CLOSE ---- */
+}
+@media screen and (max-width: 480px) {
+  /* ---- HEADER : START ---- */
+  .wrapper-header .bgslide {
+    background: none;
+  }
+  .item .slidebg {
+    opacity: 0;
+  }
+  /* ---- HEADER : CLOSE ---- */
 }
