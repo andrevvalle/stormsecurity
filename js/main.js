@@ -14,9 +14,6 @@ $(document).ready( function(){
 function init() {
 
 	var primeiraurl = $('a.ajax:first-child').attr('href');
-	
-	// var urlnext = $('.ulajax li a.active').closest('li').next().find('a').attr('href');
-	// var urlprev = $('.ulajax li a.active').closest('li').prev().find('a').attr('href');
 
 	changePage(primeiraurl);
 
@@ -31,6 +28,7 @@ function init() {
 	changePage(url);
 
 	});
+
 }
 function changePage(urlPage){
 
@@ -60,3 +58,46 @@ function loading(acao){
         $('#loading').fadeOut('fast');
     };
 }
+
+$('.next-i').on('click', function(e){
+	e.preventDefault();
+
+	var urlnext = $('.ulajax li a.active').closest('li').next().find('a').attr('href');
+	var nextclass = $('.ulajax li a.active').closest('li').next().find('a');
+
+	if (typeof(urlnext) == 'undefined') {
+		var urlnext = $('a.ajax:first-child').attr('href');
+		var nextclass = $('.ulajax li a.first');
+
+		$('.ulajax li a').removeClass('active');
+		nextclass.addClass('active');
+
+		changePage(urlnext);
+	}else{
+		$('.ulajax li a').removeClass('active');
+		nextclass.addClass('active');
+
+		changePage(urlnext);
+	}
+});
+$('.prev-i').on('click', function(e){
+	e.preventDefault();
+
+	var urlprev = $('.ulajax li a.active').closest('li').prev().find('a').attr('href');
+	var prevclass = $('.ulajax li a.active').closest('li').prev().find('a');
+
+	if (typeof(urlprev) == 'undefined') {
+		var urlprev = $('.ulajax').children('li').last().find('a').attr('href');
+		var prevclass = $('.ulajax').children('li').last().find('a');
+
+		$('.ulajax li a').removeClass('active');
+		prevclass.addClass('active');
+
+		changePage(urlprev);
+	}else{
+		$('.ulajax li a').removeClass('active');
+		prevclass.addClass('active');
+
+		changePage(urlprev);
+	}
+});
