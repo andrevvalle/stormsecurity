@@ -72,11 +72,13 @@ $('.next-i').on('click', function(e){
 		$('.ulajax li a').removeClass('active');
 		nextclass.addClass('active');
 
+		$('#appContent').fadeOut();
 		changePage(urlnext);
 	}else{
 		$('.ulajax li a').removeClass('active');
 		nextclass.addClass('active');
 
+		$('#appContent').fadeOut();
 		changePage(urlnext);
 	}
 });
@@ -93,11 +95,13 @@ $('.prev-i').on('click', function(e){
 		$('.ulajax li a').removeClass('active');
 		prevclass.addClass('active');
 
+		$('#appContent').fadeOut();
 		changePage(urlprev);
 	}else{
 		$('.ulajax li a').removeClass('active');
 		prevclass.addClass('active');
 
+		$('#appContent').fadeOut();
 		changePage(urlprev);
 	}
 });
