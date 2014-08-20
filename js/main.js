@@ -1,4 +1,7 @@
 $(document).ready( function(){
+
+	init();
+
 	var nav = $('#nav-toggle');
 	
 	nav.click( function(e){
