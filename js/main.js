@@ -8,8 +8,15 @@ $(document).ready( function(){
 		base.toggleClass('active');
 		$('#nav').slideToggle();
 	});
+	 
+	$( "#select" ).change( function(){
+		var valor = $( "#select" ).val();
+  		$('#appContent').fadeOut();
+		changePage(valor);
+	});
 
 });
+
 // AJAX CONTENT
 function init() {
 
@@ -82,6 +89,7 @@ $('.next-i').on('click', function(e){
 		changePage(urlnext);
 	}
 });
+
 $('.prev-i').on('click', function(e){
 	e.preventDefault();
 
