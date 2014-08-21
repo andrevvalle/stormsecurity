@@ -19,7 +19,6 @@ $(document).ready( function(){
 	});
 
 });
-
 // AJAX CONTENT
 function init() {
 
@@ -92,7 +91,6 @@ $('.next-i').on('click', function(e){
 		changePage(urlnext);
 	}
 });
-
 $('.prev-i').on('click', function(e){
 	e.preventDefault();
 
